@@ -1,6 +1,6 @@
 class User {
-  name: string;
-  age: number;
+  private name: string;
+  private age: number;
 
   constructor(name: string, age: number) {
     this.name = name;
@@ -10,6 +10,14 @@ class User {
   // public method
   printUserInfo() {
     console.log(`name: ${this.name}, age: ${this.age}`);
+  }
+
+  getAge() {
+    return this.age;
+  }
+
+  getName() {
+    return this.name;
   }
 }
 
@@ -25,3 +33,5 @@ juan.printUserInfo();
 
 juan.name;
 juan.age;
+
+juan.getName();
